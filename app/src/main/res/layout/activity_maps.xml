@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".MapsActivity"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:weightSum="5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/linearLayout"
+        android:orientation="horizontal"
+        android:padding="30dp">
+
+        <TextView
+            android:layout_weight="2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/txtRestClose"
+            android:text="Close Restaurant"
+            android:textSize="15dp"
+            android:padding="20dp"></TextView>
+
+        <Spinner
+            android:layout_weight="3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/spnDummydata"
+            android:entries="@array/clases"
+            android:padding="20dp"></Spinner>
+    </LinearLayout>
+
+<fragment
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:map="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/map"
+    android:layout_below="@id/linearLayout"
+    android:orientation="vertical"
+    android:name="com.google.android.gms.maps.SupportMapFragment">
+</fragment>
+</RelativeLayout>
